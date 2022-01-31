@@ -1,0 +1,28 @@
+query KoilVaults(
+    $skip: Int
+    $first: Int
+    $orderBy: KoilVault_orderBy
+    $orderDirection: OrderDirection
+    $where: KoilVault_filter
+    $block: Block_height
+) {
+    koilVaults(
+        skip: $skip
+        first: $first
+        orderBy: $orderBy
+        orderDirection: $orderDirection
+        where: $where
+        block: $block
+    ) {
+        ...SubgraphKoilVault
+    }
+}
+
+fragment SubgraphKoilVault on KoilVault {
+    id
+    totalLiquidity
+    totalSwapVolume
+    totalSwapFee
+    totalSwapCount
+    poolCount
+}
