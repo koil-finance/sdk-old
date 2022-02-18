@@ -1,7 +1,7 @@
 overwrite: true
 generates:
     src/subgraph/generated/koil-subgraph-types.ts:
-        schema: ${KOIL_SUBGRAPH_URL:https://api.thegraph.com/subgraphs/name/koil-finance/koil-finance}
+        schema: ${KOIL_SUBGRAPH_URL:https://api.thegraph.com/subgraphs/name/koil-finance/koil-protocol}
         documents: 'src/subgraph/graphql/**/*.graphql'
         plugins:
             - typescript
@@ -13,7 +13,7 @@ generates:
                 Bytes: string
                 BigDecimal: string
     src/subgraph/generated/koil-subgraph-schema.graphql:
-        schema: ${KOIL_SUBGRAPH_URL:https://api.thegraph.com/subgraphs/name/koil-finance/koil-finance}
+        schema: ${KOIL_SUBGRAPH_URL:https://api.thegraph.com/subgraphs/name/koil-finance/koil-protocol}
         plugins:
             - schema-ast
 hooks:
